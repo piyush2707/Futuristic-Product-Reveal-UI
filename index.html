@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Futuristic Product | Designed by Piyush</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      scroll-behavior: smooth;
+    }header {
+  height: 100vh;
+  background: linear-gradient(135deg, #111827, #1f2937);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.designer {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  animation: flyIn 2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeIn 2s ease 2s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  background: #1e293b;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  color: #ccc;
+}
+
+  </style>
+</head>
+<body>  <header>
+    <div class="designer">✨ Designed by Piyush ✨</div>
+    <h1 class="title">Introducing the Future</h1>
+  </header>  <section id="overview">
+    <h2>Product Overview</h2>
+    <p>Welcome to the next-generation product showcase. Smooth animations, futuristic design, and seamless user experience — all built using only HTML, CSS, and JavaScript.</p>
+  </section>  <section id="features">
+    <h2>Key Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🚀 Lightning Fast</h3>
+        <p>Built for speed and responsiveness using clean code and modern layout.</p>
+      </div>
+      <div class="feature">
+        <h3>🎨 Stylish UI</h3>
+        <p>Elegant gradients, glassmorphism, and a futuristic color palette.</p>
+      </div>
+      <div class="feature">
+        <h3>📱 Responsive</h3>
+        <p>Looks great on all devices from mobile to desktop.</p>
+      </div>
+    </div>
+  </section>  <section id="cta">
+    <h2>Ready to Explore?</h2>
+    <p>This is a developer-friendly, animated landing page. Customize it, reuse it, or show it off as part of your portfolio.</p>
+  </section>  <footer>
+    Designed & Built with ❤️ by <strong>Piyush Joshi</strong> | © 2025
+  </footer>  <script>
+    // Scroll Reveal
+    const sections = document.querySelectorAll('section');
+
+    function revealOnScroll() {
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+        if (top < winHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script></body>
+</html>
